@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="600" viewBox="0 0 560 600" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#3a3a3a">対話システム ── ゲーム全体のナラティブフロー</text>
+  <text x="280" y="44" text-anchor="middle" font-size="11" fill="#8a8a8a">タイトル〜本編〜リザルトを貫く進行。失敗回数で 3 エンディングへ分岐</text>
+
+  <!-- spine arrows -->
+  <line x1="280" y1="110" x2="280" y2="134" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="182" x2="280" y2="206" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="254" x2="280" y2="278" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="326" x2="280" y2="350" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="398" x2="280" y2="422" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- result branch arrows -->
+  <line x1="280" y1="468" x2="108" y2="514" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="468" x2="280" y2="514" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="280" y1="468" x2="452" y2="514" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- spine boxes -->
+  <rect x="170" y="64" width="220" height="44" rx="12" fill="#fff3df" stroke="#e7c887" stroke-width="1.5"/>
+  <text x="280" y="91" text-anchor="middle" font-size="13" font-weight="700" fill="#8a6a26">タイトル（導入ダイアログ）</text>
+
+  <rect x="170" y="136" width="220" height="44" rx="12" fill="#e8f4ee" stroke="#9ccdb6" stroke-width="1.5"/>
+  <text x="280" y="163" text-anchor="middle" font-size="13" font-weight="700" fill="#2f6b52">ミニゲーム</text>
+
+  <rect x="170" y="208" width="220" height="44" rx="12" fill="#e9f0fb" stroke="#a7c1e8" stroke-width="1.5"/>
+  <text x="280" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#2f4f86">区切りダイアログ</text>
+
+  <rect x="170" y="280" width="220" height="44" rx="12" fill="#e8f4ee" stroke="#9ccdb6" stroke-width="1.5"/>
+  <text x="280" y="307" text-anchor="middle" font-size="13" font-weight="700" fill="#2f6b52">ミニゲーム</text>
+
+  <rect x="170" y="352" width="220" height="44" rx="12" fill="#e9f0fb" stroke="#a7c1e8" stroke-width="1.5"/>
+  <text x="280" y="379" text-anchor="middle" font-size="13" font-weight="700" fill="#2f4f86">区切りダイアログ</text>
+
+  <rect x="170" y="424" width="220" height="44" rx="12" fill="#efeafa" stroke="#c4b5e6" stroke-width="1.5"/>
+  <text x="280" y="451" text-anchor="middle" font-size="13" font-weight="700" fill="#5b4a8a">リザルト（失敗回数で分岐）</text>
+
+  <!-- ending boxes -->
+  <rect x="33" y="518" width="150" height="44" rx="12" fill="#e6f5ea" stroke="#9fcfae" stroke-width="1.5"/>
+  <text x="108" y="545" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f7d4f">Good End</text>
+
+  <rect x="205" y="518" width="150" height="44" rx="12" fill="#eef1f6" stroke="#b9c5d6" stroke-width="1.5"/>
+  <text x="280" y="545" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4a5870">Normal End</text>
+
+  <rect x="377" y="518" width="150" height="44" rx="12" fill="#fdecec" stroke="#e3a3a3" stroke-width="1.5"/>
+  <text x="452" y="545" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a14a4a">Bad End</text>
+</svg>

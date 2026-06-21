@@ -8,19 +8,16 @@
 ## 1. Reconcile with UIChan（9人チーム制作）
 
 - **役割**：プログラマー（**対話システム** / **UI迷路 ミニゲーム** ＋ タイトル・リザルト）
-- **出展**：**BitSummit 2026** 出展・受賞作<!-- TODO: 受賞名 / プレイ可能リンクを記入 -->
 - **エンジン**：Unity 6 (6000.0.59f2) / URP
-- **使用技術**：C# · UniTask · DOTween · Febucci Text Animator · TextMeshPro · Feel · Input System
+- **受賞**： BitSummitGameJamにて、協賛企業賞および審査員賞をチームで受賞
 - **設計**：UniTask による非同期制御 ／ イベント・デリゲート駆動の疎結合 ／ CSV データ駆動
-- **規模**：担当 約7,600行 / 85ファイル
 - 🔗 **コード**：[`ui-chan-to-wakai-seyo/src/`](ui-chan-to-wakai-seyo/src/)
 
 ### 担当① 対話システム（[`src/Dialogue/`](ui-chan-to-wakai-seyo/src/Dialogue/)）
 CSV 駆動のシナリオエンジン。タイトル〜本編〜リザルトを貫くナラティブ基盤を実装。
 
 - **UniTask + CancellationToken** による非同期対話ループ（再呼び出し時も安全に中断）。
-- **Febucci タイプライタ**統合（完了検知 / フレーム単位スキップ）。
-- **JP⇄EN リアルタイム言語切替**（表示中の行を即再レンダリング）。
+- **JP⇄EN マルチ言語対応
 
 ```mermaid
 flowchart TD

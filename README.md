@@ -43,21 +43,18 @@ flowchart TD
 ```
 
 ### 担当② UIメイズ ミニゲーム（[`src/UIMazeV2/`](ui-chan-to-wakai-seyo/src/UIMazeV2/)）
-OS デスクトップ風ステージ。複数ウィンドウに **3種のミニゲーム**（見下ろし迷路 / 横スクロール / クレジット走破）が同居し、プレイヤー1体を共有。
+OS デスクトップ風ステージ。1つのミニゲーム枠の中に **3種のミニゲーム**（見下ろし迷路 / 横スクロール / クレジット走破）が入れ替わりで登場し、プレイヤー1体を引き継いで進行する。
 
-- **統合初期化** — `IInitializable`/`IInit` 準拠。依存をハードコードせず順次初期化、初期化中は物理停止で落下死を防止。
+- **ウィンドウ遷移** — クリアごとに `ShowWindow()` で対象ウィンドウのみを表示し、プレイヤー・カメラ・サウンドを次のミニゲームへ引き継ぐ。
 - **SpriteMask** によるウィンドウ単位クリッピング＋プレイヤー追従フレーム。
 - 軌跡記録→再生で追う**“自分の影”ゴースト**、dissolve / glitch シェーダ演出（`MaterialPropertyBlock`）。
 - 落下障害物の**枠貫通衝突**、着地連動のウィンドウ縮小、双方向テレポート、ローカライズドボイス。
 
 ```mermaid
-flowchart TD
-    G["GameManager: ExecuteInitializing"] --> I["WindowManager.InitializeAsync"]
-    I --> F["FindObjectsByType → IInit を収集"]
-    F --> A["各 IInit を順次 await Init()"]
-    A --> WT["SectionTypeEvent(UIMaze) 待機"]
-    WT --> R["物理再開 + ShowWindow(0)"]
-    R --> P["ミニゲーム開始 / ウィンドウ間を遷移"]
+flowchart LR
+    M1["ミニゲーム①<br/>見下ろし迷路<br/>（ゴースト回避）"] -->|クリアで遷移| M2["ミニゲーム②<br/>横スクロール<br/>（ウィンドウ縮小・落下物）"]
+    M2 -->|クリアで遷移| M3["ミニゲーム③<br/>クレジット走破<br/>（テレポート・生存）"]
+    M3 -->|クリア| GOAL["最終ゴール"]
 ```
 
 <p align="center">

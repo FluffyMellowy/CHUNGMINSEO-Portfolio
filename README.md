@@ -11,7 +11,7 @@
 - **出展**：**BitSummit 2026** 出展・受賞作<!-- TODO: 受賞名 / プレイ可能リンクを記入 -->
 - **エンジン**：Unity 6 (6000.0.59f2) / URP
 - **使用技術**：C# · UniTask · DOTween · Febucci Text Animator · TextMeshPro · Feel · Input System
-- **設計**：C# イベント／デリゲートによる疎結合
+- **設計**：UniTask による非同期制御 ／ イベント・デリゲート駆動の疎結合 ／ CSV データ駆動
 - **規模**：担当 約7,600行 / 85ファイル
 - 🔗 **コード**：[`ui-chan-to-wakai-seyo/src/`](ui-chan-to-wakai-seyo/src/)
 

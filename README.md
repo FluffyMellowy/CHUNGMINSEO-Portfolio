@@ -50,12 +50,9 @@ OS デスクトップ風ステージ。1つのミニゲーム枠の中に **3種
 - 軌跡記録→再生で追う**“自分の影”ゴースト**、dissolve / glitch シェーダ演出（`MaterialPropertyBlock`）。
 - 落下障害物の**枠貫通衝突**、着地連動のウィンドウ縮小、双方向テレポート、ローカライズドボイス。
 
-```mermaid
-flowchart LR
-    M1["ミニゲーム①<br/>見下ろし迷路<br/>（ゴースト回避）"] -->|クリアで遷移| M2["ミニゲーム②<br/>横スクロール<br/>（ウィンドウ縮小・落下物）"]
-    M2 -->|クリアで遷移| M3["ミニゲーム③<br/>クレジット走破<br/>（テレポート・生存）"]
-    M3 -->|クリア| GOAL["最終ゴール"]
-```
+<p align="center">
+  <img src="ui-chan-to-wakai-seyo/screenshots/minigame_flow.svg" alt="3つのミニゲームのウィンドウ遷移" width="760">
+</p>
 
 <p align="center">
   <img src="ui-chan-to-wakai-seyo/screenshots/title_alt.png" width="380">

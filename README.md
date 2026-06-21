@@ -12,6 +12,7 @@
 - **受賞**： BitSummitGameJamにて、協賛企業賞および審査員賞をチームで受賞
 - **設計**：UniTask による非同期制御 ／ イベント・デリゲート駆動の疎結合 ／ CSV データ駆動
 - 🔗 **コード**：[`ui-chan-to-wakai-seyo/src/`](ui-chan-to-wakai-seyo/src/)
+- ▶ **プレイ**：[itch.io（BitSummit Game Jam 2026）](https://bitsummit-gamejam.itch.io/uityantowakaiseyo)
 
 ### 担当① 対話システム（[`src/Dialogue/`](ui-chan-to-wakai-seyo/src/Dialogue/)）
 CSV 駆動のシナリオエンジン。タイトル〜本編〜リザルトを貫くナラティブ基盤を実装。
